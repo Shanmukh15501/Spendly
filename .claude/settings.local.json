@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"$env:USERPROFILE\" -Filter \".claude\" -Directory -ErrorAction SilentlyContinue | Select-Object FullName; npm config get prefix 2>$null)",
+      "PowerShell(Get-ChildItem \"$env:LOCALAPPDATA\" -Directory | Where-Object { $_.Name -match \"claude|anthropic\" } | Select-Object Name, FullName; Get-ChildItem \"C:\\\\Program Files\" -Directory | Where-Object { $_.Name -match \"claude|anthropic\" } | Select-Object Name, FullName)"
+    ]
+  }
+}
